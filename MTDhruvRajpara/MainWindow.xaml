@@ -1,0 +1,36 @@
+﻿<Window x:Class="MTDhruvRajpara.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MTDhruvRajpara"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded" Closing="Window_Closing">
+    <Grid>
+        <Canvas Opacity="0.98">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/testImg1.jpg"/>
+            </Canvas.Background>
+            <Menu>
+                <MenuItem Header="_File">
+                    <MenuItem Header="_New"/>
+                    <MenuItem Header="_Save"/>
+                    <MenuItem x:Name="quitMenu" Header="Quit" Click="quitMenu_Click"/>
+                    <Separator></Separator>
+                </MenuItem>
+                <MenuItem Header="_View">
+                    <MenuItem x:Name="playerMenu" Header="View All Players" Click="Playerbtn_Click"/>
+                    <MenuItem x:Name="coachMenu" Header="View Cocahes" Click="Coachbtn_Click"/>
+                    <MenuItem x:Name="ManagerMenu" Header="View Managers" Click="Managerbtn_Click"/>
+                </MenuItem>
+
+                <MenuItem Header="Help" Click="studInfo_Click">
+
+                </MenuItem>
+            </Menu>
+            <Button x:Name="coachbtn_Click" Content="View Coaches" Canvas.Left="301" Canvas.Top="182" Click="Coachbtn_Click" Height="70" Width="198" FontFamily="Georgia" FontSize="15" Background="#FF75C22A"/>
+            <Button x:Name="playerbtn_Click" Content="View Players" Canvas.Left="55" Canvas.Top="72" Click="Playerbtn_Click" Height="70" Width="198" FontFamily="Georgia" FontSize="15" Background="#FF75C22A"/>
+            <Button x:Name="managerbtn_Click" Content="View Manager" Canvas.Left="536" Canvas.Top="282" Click="Managerbtn_Click" Height="70" Width="198" FontFamily="Georgia" FontSize="15" Background="#FF75C22A"/>
+        </Canvas>
+    </Grid>
+</Window>
